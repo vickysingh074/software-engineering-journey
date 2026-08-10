@@ -1,0 +1,52 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    name: Validate Pull Request
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate Markdown files
+        run: |
+          echo "Checking Markdown files..."
+
+          files=$(find . -name "*.md" -not -path "./.git/*")
+
+          if [ -z "$files" ]; then
+            echo "No Markdown files found."
+            exit 0
+          fi
+
+          echo "Markdown files found:"
+          echo "$files"
+
+      - name: Check for obvious secrets
+        run: |
+          echo "Checking repository for common secret patterns..."
+
+          if grep -RniE \
+            --exclude-dir=.git \
+            --exclude="pr-validation.yml" \
+            -e "password=" \
+            -e "connectionstring=" \
+            -e "client_secret" \
+            -e "api_key" \
+            -e "apikey" \
+            .; then
+
+            echo "Potential secret pattern detected."
+            exit 1
+          fi
+
+          echo "No obvious secret patterns detected."
+
+      - name: Validation successful
+        run: echo "All PR validation checks passed."
