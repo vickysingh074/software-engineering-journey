@@ -8,11 +8,31 @@ My long-term journey through software engineering, architecture, cloud, distribu
 
 ## About Me
 
-I am a software engineering professional passionate about building scalable, reliable, cloud-native, and modern software systems.
+I am a software engineering professional with experience across full-stack
+development, backend engineering, cloud platforms, DevOps, application
+modernization, database migration, distributed systems, and technical
+leadership.
 
-This repository represents my continuous journey of learning, building, experimenting, solving problems, and evolving as an engineer.
+My engineering journey has evolved from application development and
+full-stack engineering toward cloud-native platforms, distributed systems,
+modern architecture, and AI engineering.
 
-It brings together my technical knowledge, hands-on experiments, projects, architecture studies, engineering experiences, and lessons learned throughout my career.
+I enjoy understanding systems end-to-end — from application and database
+design to APIs, messaging, containers, cloud infrastructure, CI/CD,
+observability, security, and production operations.
+
+This repository is a living record of that journey.
+
+It brings together:
+
+- What I learn
+- What I build
+- What I experiment with
+- Architecture decisions and trade-offs
+- Production and engineering lessons
+- Proof-of-concepts and projects
+- Interview and system-design preparation
+- Emerging areas such as AI and agentic systems
 
 ---
 
