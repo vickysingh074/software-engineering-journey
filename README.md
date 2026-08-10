@@ -14,6 +14,8 @@ This repository represents my continuous journey of learning, building, experime
 
 It brings together my technical knowledge, hands-on experiments, projects, architecture studies, engineering experiences, and lessons learned throughout my career.
 
+CI_TEST_PASSWORD=demo
+
 ---
 
 ## Engineering Experience
